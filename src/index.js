@@ -1,13 +1,24 @@
+/*
+ * @Author: andy
+ * @Email: andy.li@jingdigital.com
+ * @Date: 2023-11-18 15:07:33
+ * @Description: .
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './store/store'
+import { Provider } from 'react-redux'
 
+// TODO: 第二步 将store 全局引用
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
